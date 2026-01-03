@@ -20,7 +20,7 @@ version = 1.0
 
 # Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+requirements = python3==3.10.8,kivy==2.1.0,sdl2_ttf==2.0.15,pillow,android
 
 # Supported orientation (landscape, portrait or all)
 orientation = portrait
@@ -59,7 +59,7 @@ android.presplash_color = #19191e
 #android.icon_filename = %(source.dir)s/data/icon.png
 
 # Supported ABIs (armeabi-v7a, arm64-v8a, x86, x86_64)
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a
 
 
 # Buildozer settings
