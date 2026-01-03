@@ -1,0 +1,11 @@
+# Math Hunter Android - Python Requirements
+
+# Core Framework
+kivy>=2.1.0
+
+# Build Tools
+buildozer>=1.4.0
+cython==0.29.33
+
+# Optional: For better performance
+pillow>=9.0.0
