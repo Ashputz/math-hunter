@@ -39,11 +39,19 @@ jobs:
     - name: Install Python tools
       run: |
         pip install --upgrade pip
-        pip install buildozer cython==0.29.33
+        pip install buildozer==1.5.0
+        pip install cython==0.29.33
+        pip install python-for-android==2024.1.21
     
-    - name: Build APK with retry
+    - name: Accept Android licenses
       run: |
-        yes | buildozer android debug || buildozer android debug
+        yes | sdkmanager --licenses || true
+    
+    - name: Build APK (single arch)
+      run: |
+        buildozer android debug
+      env:
+        ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
     
     - name: Upload APK
       uses: actions/upload-artifact@v4
